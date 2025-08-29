@@ -12,8 +12,8 @@ df = pd.read_excel(data_location, header=None, names=column_names, skiprows=2, n
 uncertainty_sheet = pd.read_excel(data_location, header=None, names=err_names, usecols=range(0,11), skiprows=1, nrows=11, sheet_name='Errores C fijo')
 
 
-## El eje de las absisas representará el cuadrado del campo magnético.
-## El eje de las ordenadas será una función del radio de color azul que provoca el haz de electrones a su paso.
+## The horizontal axis will represent the square of the magnetic field
+## The vertical axis will represent a function of the radius for the blue glow caused by the electron beam.
 
 avg_radius = (df['Radio izq. [cm]'] + df['Radio der. [cm]']) / 200
 
@@ -53,3 +53,4 @@ ax.plot(f_x,f_y, color='mediumvioletred') ## Función
 fig.autofmt_xdate()
 
 plt.show()
+
